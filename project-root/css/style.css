@@ -1,0 +1,258 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+/* ===== Layout ===== */
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* ===== Títulos ===== */
+h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 1rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 3px solid #4f46e5;
+    display: inline-block;
+}
+
+/* ===== Card do Formulário ===== */
+#contatoForm {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    margin-bottom: 2.5rem;
+}
+
+/* ===== Inputs ===== */
+.form-control {
+    border: 1.5px solid #dde1e7;
+    border-radius: 8px;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.95rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: #fafafa;
+}
+
+.form-control:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+    background: #fff;
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #adb5bd;
+}
+
+/* ===== Botões ===== */
+.btn {
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #4f46e5;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.35);
+}
+
+.btn-success {
+    background: #10b981;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background: #059669;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+}
+
+.btn-warning {
+    background: #f59e0b;
+    color: #fff;
+}
+
+.btn-warning:hover {
+    background: #d97706;
+}
+
+.btn-danger {
+    background: #ef4444;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+}
+
+.btn-sm {
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8rem;
+}
+
+/* ===== Campo de busca ===== */
+#search {
+    background: #fff;
+    border: 1.5px solid #dde1e7;
+    border-radius: 8px;
+    padding: 0.55rem 0.9rem 0.55rem 2.4rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23adb5bd' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 0.75rem center;
+    font-size: 0.95rem;
+    width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#search:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+    outline: none;
+}
+
+/* ===== Tabela ===== */
+#contactsTable {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+#contactsTable thead tr {
+    background: #4f46e5;
+    color: #fff;
+}
+
+#contactsTable thead th {
+    padding: 0.85rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border: none;
+}
+
+#contactsTable tbody tr {
+    transition: background 0.15s;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+#contactsTable tbody tr:last-child {
+    border-bottom: none;
+}
+
+#contactsTable tbody tr:hover {
+    background: #f5f3ff;
+}
+
+#contactsTable tbody td {
+    padding: 0.8rem 1rem;
+    font-size: 0.92rem;
+    vertical-align: middle;
+    border: none;
+}
+
+/* Linhas alternadas */
+#contactsTable tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+#contactsTable tbody tr:nth-child(even):hover {
+    background: #f5f3ff;
+}
+
+/* ===== Coluna de ações ===== */
+#contactsTable td:last-child {
+    white-space: nowrap;
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+
+    #contatoForm {
+        padding: 1.2rem;
+    }
+
+    #contactsTable thead {
+        display: none;
+    }
+
+    #contactsTable tbody tr {
+        display: block;
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    #contactsTable tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.6rem 1rem;
+        border-bottom: 1px solid #f0f2f5;
+    }
+
+    #contactsTable tbody td:last-child {
+        border-bottom: none;
+        justify-content: flex-end;
+    }
+}
+
+/* ===== Foto do contato ===== */
+.contact-photo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+    display: block;
+}
+
+/* Avatar exibido quando o contato não tem foto */
+.contact-photo-placeholder {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #e0e7ff;
+    color: #4f46e5;
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #c7d2fe;
+}

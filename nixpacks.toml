@@ -1,5 +1,3 @@
-[phases.setup]
-nixPkgs = ["php", "phpExtensions.mysqli", "phpExtensions.fileinfo", "phpExtensions.mbstring"]
+ [start]
+ cmd = "php -S 0.0.0.0:${PORT} index.php"
 
-[start]
-cmd = "php -S 0.0.0.0:$PORT -t project-root"

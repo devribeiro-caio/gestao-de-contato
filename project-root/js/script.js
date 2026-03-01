@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
   const LIMIT = 5; // quantidade de contatos exibidos por página
+  const BASE  = window.APP_BASE || 'project-root/'; // caminho base para os endpoints PHP e assets
   let currentPage = 1;
 
   // Recupera do localStorage o último filtro e ordenação usados pelo usuário.
@@ -38,7 +39,7 @@ $(document).ready(function () {
   function loadContacts(page) {
     currentPage = page || 1;
 
-    $.getJSON('php/list.php', {
+    $.getJSON(BASE + 'php/list.php', {
       order: currentOrder,
       page:  currentPage,
       limit: LIMIT
@@ -60,7 +61,7 @@ $(document).ready(function () {
           // Exibe a foto do contato se existir, ou um avatar com a inicial do nome
           let inicial = escapeHtml(c.name.charAt(0).toUpperCase());
           let fotoHtml = c.photo
-            ? `<img src="assets/${escapeHtml(c.photo)}" alt="Foto" class="contact-photo">`
+            ? `<img src="${BASE}assets/${escapeHtml(c.photo)}" alt="Foto" class="contact-photo">`
             : `<div class="contact-photo-placeholder">${inicial}</div>`;
 
           rows += `<tr>
@@ -149,8 +150,8 @@ $(document).ready(function () {
 
     // Se existe input hidden com id => é uma edição, senão é um cadastro
     let action = $('#contatoForm input[name="id"]').length
-      ? 'php/update.php'
-      : 'php/insert.php';
+      ? BASE + 'php/update.php'
+      : BASE + 'php/insert.php';
 
     let formData = new FormData(this);
 
@@ -223,7 +224,7 @@ $(document).ready(function () {
 
     let id = $(this).data('id');
 
-    $.post('php/delete.php', { id: id }, function (response) {
+    $.post(BASE + 'php/delete.php', { id: id }, function (response) {
       alert(response);
       loadContacts(currentPage); // permanece na mesma página após remover
     });

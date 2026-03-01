@@ -7,7 +7,7 @@ $pass   = getenv('MYSQLPASSWORD') ?: '';
 $dbname = getenv('MYSQLDATABASE') ?: 'contacts_db';
 $port   = getenv('MYSQLPORT')     ?: 3306;
 
-$conn = new mysqli($host, $user, $pass, $dbname, (int)$port);
+$conn = new mysqli($host, $user, $pass, $dbname, (int)$port); // Conexão com o banco de dados MySQL
 
 if ($conn->connect_error) {
     die("Erro de Conexão: " . $conn->connect_error);

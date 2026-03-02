@@ -24,12 +24,15 @@
 
 ### Usando servidor embutido do PHP
 1. No terminal, vá até a pasta do projeto:
-```bash
-cd gestao-de-contato
+```PowerShell
+cd "C:\Users\caiok\OneDrive\Área de Trabalho\Gestao de Contato"
 
 Rode: php -S localhost:8000
 
 ## Abra no navegador:
+http://localhost:8000/index.php
+php -v
+php -S localhost:8000
 http://localhost:8000/index.php
 
 ## 🌐 Deploy no Railway (produção)
@@ -58,5 +61,6 @@ JavaScript (ES6+) → interatividade, filtros dinâmicos e validações no front
 phpMyAdmin → interface gráfica para gerenciar o banco de dados.
 
 XAMPP/WAMP → servidor local com Apache + PHP + MySQL.
+
 
 Git/GitHub → versionamento e hospedagem do código.

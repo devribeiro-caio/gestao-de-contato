@@ -1,0 +1,205 @@
+/* ===== Reset & Base ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9e4e4; /* Fundo pêssego suave como no modelo */
+    color: #333;
+    min-height: 100vh;
+    padding: 3rem 1rem;
+}
+
+/* ===== Layout ===== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ===== Títulos ===== */
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3090DB;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    border-bottom: 3px solid #3090DB;
+    padding-bottom: 2px;
+}
+
+/* ===== Card do Formulário ===== */
+.card-form {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
+}
+
+/* ===== Inputs ===== */
+.form-control, .form-select {
+    border: 1.5px solid #3090DB;
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+    color: #333;
+    transition: all 0.2s;
+    background: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #3090DB;
+    box-shadow: 0 0 0 3px rgba(48, 144, 219, 0.1);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: #888;
+}
+
+/* ===== Botões ===== */
+.btn {
+    border-radius: 8px;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: #3090DB;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #257ab8;
+}
+
+/* Botões na tabela */
+.btn-action {
+    background: #3090DB !important;
+    padding: 6px;
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.btn-action img {
+    width: 18px;
+    height: 18px;
+}
+
+/* ===== Filtros e Busca ===== */
+.filters-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 1rem;
+}
+
+.search-container {
+    position: relative;
+    flex: 1;
+}
+
+.search-container i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+#search {
+    padding-left: 2.5rem;
+    margin-bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23aaa' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 12px center;
+}
+
+#orderBy {
+    width: auto;
+    margin-bottom: 0;
+}
+
+/* ===== Tabela ===== */
+.table-container {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+}
+
+#contactsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#contactsTable thead th {
+    background: #fff;
+    color: #333;
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eee;
+}
+
+#contactsTable tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+#contactsTable tbody tr:nth-child(even) {
+    background: #fcfcfc;
+}
+
+/* Fotos redondas */
+.contact-photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.contact-photo-placeholder {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #888;
+}
+
+/* Paginação */
+.pagination {
+    margin-top: 1.5rem;
+}
+
+.page-link {
+    border-radius: 6px !important;
+    margin: 0 2px;
+    color: #3090DB;
+    border-color: #eee;
+}
+
+.page-item.active .page-link {
+    background-color: #3090DB;
+    border-color: #3090DB;
+}

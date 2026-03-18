@@ -29,7 +29,7 @@ CREATE TABLE `contacts` (
   `phone` varchar(20) NOT NULL,
   `birthdate` date DEFAULT NULL,
   `create_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `photo` varchar(255) DEFAULT NULL,
+  `photo` varchar(255) DEFAULT NULL,  
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
